@@ -1,9 +1,13 @@
 export const addZero = (str, len) => {
+    console.log(str, str.length, len);
+    let newStr = str;
     if (str.length < len) {
-        for (let i = 0; i <= len - str.length; i++) {
-            str = '0' + str;
+        for (let i = 0; i < len - str.length; i++) {
+            newStr = '0' + newStr;
         }
     }
+    str = newStr;
+    console.log(str);
     const arr = [];
     for (let i = 0; i < len; i++) {
         arr.push(str[i]);
@@ -61,8 +65,7 @@ const copyToNewMassive = (obj) => {
 
 export const newCalculate = (obj, kolvoPerem) => {
     const newMass = copyToNewMassive(obj);
-    const ans = recurceCalculate(newMass, Number(kolvoPerem));
-    return ans;
+    return recurceCalculate(newMass, Number(kolvoPerem));
 };
 
 const checkMask = (prevSet, newArr) => {
@@ -102,7 +105,7 @@ export const recurceCalculate = (obj, kolvoPerem) => {
     let newNewMass = new Set();
     let flag = true;
     let counnt = 0;
-    while (flag === true && counnt < 10000) {
+    while (flag === true && counnt < 1000) {
         counnt++;
         flag = false;
         for (let i = 0; i < newMass.length - 1; i++) {

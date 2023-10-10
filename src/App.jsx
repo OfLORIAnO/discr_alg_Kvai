@@ -14,7 +14,7 @@ function App() {
     useEffect(() => {
         const arr = [];
         for (let i = 0; i < 2 ** kolvoPerem; i++) {
-            arr.push(addZero(i.toString(2), kolvoPerem));
+            arr.push(addZero(i.toString(2), Number(kolvoPerem)));
         }
         setRow(arr);
     }, [kolvoPerem]);

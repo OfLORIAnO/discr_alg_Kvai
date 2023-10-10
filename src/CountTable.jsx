@@ -27,6 +27,7 @@ const CountTable = ({ kolvoPerem, row, render, setRender }) => {
         const later = newCalculate(calculatedObj, kolvoPerem);
         setNewTable(calculatedObj);
         setThirdTable(later);
+        console.log(thirdTable)
     }, [row, render]);
 
     return (
@@ -46,7 +47,9 @@ const CountTable = ({ kolvoPerem, row, render, setRender }) => {
                 })}
             </table>
             <AppendTable row={newTable} kolvoPerem={kolvoPerem} render={render} />
-            <AppendTable row={thirdTable} kolvoPerem={kolvoPerem} render={render} />
+            {thirdTable && (
+                <AppendTable row={thirdTable} kolvoPerem={kolvoPerem} render={render} />
+            )}
         </>
     );
 };
