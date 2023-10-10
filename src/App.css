@@ -1,0 +1,39 @@
+* {
+    /* margin: 0; */
+    /* padding: 0; */
+    box-sizing: border-box;
+}
+th,
+tr,
+td {
+    padding: 5px;
+}
+table {
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    background: #fff;
+}
+tr {
+    margin: 2px;
+    background: palevioletred;
+}
+
+th {
+    background: coral;
+}
+td {
+}
+button {
+    padding: 5px;
+}
+.flex {
+    align-items: flex-start;
+    display: flex;
+}
+.flex > *:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+}
+.key {
+    background-color: coral;
+}
